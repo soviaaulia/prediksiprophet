@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Prediksi Komoditas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>DASHBOARD PREDIKSI PROPHET</h1>
+  </header>
+
+  <div class="container">
+    <h2>Prediksi Harga Pangan DKI Jakarta</h2>
+    
+    <div class="controls">
+      <div class="left-controls">
+        <div class="filter-box">
+          <select id="komoditasDropdown">
+            <option value="">Pilih Komoditas</option>
+            <option value="">Bawang Putih</option>
+            <option value="">Bawang Merah</option>
+            <option value="">Daging Ayam</option>
+            <option value="">Daging Sapi</option>
+            <option value="">Cabai Rawit Merah</option>
+            <option value="">Cabai Merah Keriting</option>
+            <option value="">Telur Ayam</option>
+            <option value="">Beras</option>
+            <option value="">Gula Pasir</option>
+            <option value="">Minyak Goreng Kemasan</option>
+          </select>
+        </div>
+        <div class="filter-box custom-file-upload">
+          <label for="uploadCSV">Upload File</label>
+          <input type="file" id="uploadCSV" accept=".csv">
+        </div>
+      </div>
+
+      <div class="right-controls">
+        <div class="filter-box">
+          <input type="date" id="startDate" value="2020-01-01">
+        </div>
+        <div class="filter-box">
+          <button onclick="filterByDate()">Filter</button>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="chartPrediksi" width="1000" height="450"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
